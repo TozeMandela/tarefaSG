@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+body{
+
+}
+main.conteiner {
+  background-color: bisque;
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+span{
+  display: inline;
+}
+h6{
+  display: inline-block;
+}
