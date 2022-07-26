@@ -1,6 +1,7 @@
 ((doc, win)=>{
 let id = localStorage.getItem('id');
 let select = doc.querySelector('.listTarefa');
+let btnVerT = doc.querySelector('.verT');
 
 XhttpRequest.get(`/users/admin/add/tarefa/${id}`).then((data)=>{
     console.log('userTTTTTT: ',JSON.parse(data))
@@ -12,8 +13,6 @@ XhttpRequest.get(`/users/admin/add/tarefa/${id}`).then((data)=>{
 XhttpRequest.get(`/users`).then(users=>{
     let arr = JSON.parse(users);
 
-    console.log('aa: ', users, select, arr)
-
     arr.forEach(user => {
 
         createOption(select, user._name, user._id);
@@ -22,9 +21,13 @@ XhttpRequest.get(`/users`).then(users=>{
 });
 
 function createOption(se, op, value){
-
+    
     se.options[se.options.length] = new Option(op, value);
 
 }
+
+btnVerT.addEventListener('click', ()=>{
+    XhttpRequest.get('/');
+})
 
 })(document, window);
