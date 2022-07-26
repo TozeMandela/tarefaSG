@@ -8,6 +8,4 @@ XhttpRequest.get(`/users/admin/add/tarefa/${id}`).then((data)=>{
 
 })
 
-console.log('itens LocalS: ' ,id)
-
 })(document, window);
