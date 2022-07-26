@@ -7,14 +7,24 @@ class Login {
         this.divSubmit2 = document.querySelector(dinN);
         this.btnSubmit = document.querySelector(btnSub);
         this.onSubmit();
+        
     }
 
     onSubmit(){
+        let _this = this;
         this.formLogin.addEventListener('submit',event=>{
             event.preventDefault();
             this.addValues()
         })
+        document.addEventListener('keydown',function(event){
+            if(event.keyCode==13){
+                event.preventDefault();
+                _this.addValues()
+
+            }
+        })
     }
+    
 
     addValues = function(){
         let obj = {};

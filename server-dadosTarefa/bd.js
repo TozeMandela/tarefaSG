@@ -50,8 +50,8 @@ const tbl = mongoose.model('Users')
 
 /* new tbl({
     _name:'Tozé Mandela',
-    _birth_date:'2002-07-05',
-    _bi: '',
+    _birth_date:'1999-08-01',
+    _bi: '0000367LN043',
     _email: 'mandelajunior10@gmail.com',
     _morada: 'Luanda/Gamek',
     _profession: 'PROGRAMADOR JR',
