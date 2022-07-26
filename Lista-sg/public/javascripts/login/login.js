@@ -45,12 +45,14 @@ class Login {
     getValues(email, senha, obj){
         
         XhttpRequest.get(`/users/${email}/${senha}`).then((d)=>{
-
+            console.log(d)
             if(JSON.parse(d).length!==0){
                 
                 if(JSON.parse(d)[0]._admin=='admin'){
 
                     this.divSubmit.style.display = 'block';
+                    this.divSubmit.querySelector('.acceptBTN').setAttribute('data-js',`${JSON.parse(d)[0]._id}`);
+                    localStorage.setItem('id', `${JSON.parse(d)[0]._id}`);
 
                 }else if(JSON.parse(d)[0]._admin=='no admin'){
 
